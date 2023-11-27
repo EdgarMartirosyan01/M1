@@ -8,7 +8,7 @@
     <div class="header__routes">
       <div class="header__routes__item" v-for="item in menuItems" :key="item.id">
         <a :href="item.route" class="header__routes__item__link" :key="item" @click="handleClickMenu(item)">
-         {{ item.title }}
+         {{ $t(item.title) }}
         </a>
       </div>
     </div>

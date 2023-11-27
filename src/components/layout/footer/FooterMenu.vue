@@ -3,11 +3,11 @@
     <div class="footer__top">
       <div class="footer__top__title-container">
         <div class="footer__top__title-container__title">
-          <span>ХОТИТЕ ЗАДАТЬ ВОПРОС </span>
-          <span class="footer__top__title-container__title__red">ИЛИ ЗАКАЗАТЬ МАТЕРИАЛЫ?</span>
+          <span>{{$t('ХОТИТЕ ЗАДАТЬ ВОПРОС ')}}</span>
+          <span class="footer__top__title-container__title__red">{{$t('ИЛИ ЗАКАЗАТЬ МАТЕРИАЛЫ?')}}</span>
         </div>
         <div class="footer__top__title-container__description">
-          Наши специалисты будут рады проконсультировать, помочь с выбором и расчетом материала под ваши задачи.
+          {{$t('Наши специалисты будут рады проконсультировать, помочь с выбором и расчетом материала под ваши задачи.')}}
         </div>
       </div>
       <div class="footer__top__form-container">
@@ -49,7 +49,7 @@
         </el-form>
         <div class="footer__top__form-container__button">
           <button @click="submitForm">
-            Отправить заявку
+            {{$t('Отправить заявку')}}
           </button>
         </div>
       </div>
@@ -60,17 +60,17 @@
           <img src="@/assets/images/M1-Footer.png" alt="M1">
         </div>
         <div class="footer__bottom__info__initials">
-          <span>Адрес TestStreet 14/4</span>
-          <span>Номер TestPhoneNumber</span>
-          <span>Email Test@mail.ru</span>
+          <span>{{$t('Адрес TestStreet 14/4')}}</span>
+          <span>{{$t('Номер TestPhoneNumber')}}</span>
+          <span>{{$t('Email TestMail.ru')}}</span>
         </div>
       </div>
       <div class="footer__bottom__rights">
         <span>
-          2023 All rights reserved
+          {{$t('2023 All rights reserved')}}
         </span>
         <span>
-          Developed and designed by  Weflex
+          {{$t('Developed and designed by  Weflex')}}
         </span>
       </div>
     </div>
