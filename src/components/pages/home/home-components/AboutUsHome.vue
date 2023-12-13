@@ -156,6 +156,12 @@ export default {
           border: 2px solid #DF2129;
           padding: 13px 17px;
           background: inherit;
+          cursor: pointer;
+        }
+        button:hover {
+          background: #DF2129;
+          color: white;
+          transition: 0.3s;
         }
       }
     }
@@ -254,6 +260,12 @@ export default {
             border: 2px solid #DF2129;
             padding: 13px 17px;
             background: inherit;
+            cursor: pointer;
+          }
+          button:hover {
+            background: #DF2129;
+            color: white;
+            transition: 0.3s;
           }
         }
       }

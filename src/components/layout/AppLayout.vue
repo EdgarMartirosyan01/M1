@@ -1,6 +1,8 @@
 <template>
   <div class="landing-page">
-    <HeaderMenu/>
+    <div id="header">
+      <HeaderMenu/>
+    </div>
       <router-view/>
     <FooterMenu/>
   </div>
@@ -24,5 +26,8 @@ export default {
   flex-direction: column;
   overflow-y: auto !important;
   scroll-behavior: smooth;
+}
+#header {
+  padding-bottom: 169px;;
 }
 </style>
