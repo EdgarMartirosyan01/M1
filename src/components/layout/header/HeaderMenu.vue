@@ -12,6 +12,9 @@
         </a>
       </div>
     </div>
+    <div class="header__menu">
+      X
+    </div>
   </div>
 </template>
 
@@ -44,13 +47,14 @@ export default {
   display: flex;
   align-content: center;
   justify-content: space-between;
-  padding: 0 230px 0 230px;
+  padding: 0 230px 169px 230px;
   box-shadow: 0 1px 1px rgba(0,0,0,0.12),
   0 2px 2px rgba(0,0,0,0.12),
   0 4px 4px rgba(0,0,0,0.12),
   0 8px 8px rgba(0,0,0,0.12),
   0 16px 16px rgba(0,0,0,0.12);
-  position: sticky ;
+  position: fixed;
+  z-index: 333;
   &__logo {
     display: flex;
     align-items: center;
@@ -82,6 +86,9 @@ export default {
         color: #DF2129 !important;
       }
     }
+  }
+  &__menu {
+    display: none;
   }
 }
 @media(max-width: 1668px) {
@@ -146,19 +153,8 @@ export default {
         }
       }
     }
-  }
-}
-@media(max-width: 1174px) {
-  .header {
-    padding: 0 84px 0 84px;
-    &__logo {
-    }
-    &__routes {
-      display: none;
-      &__item {
-        &__link {
-        }
-      }
+    &__menu {
+      display: flex;
     }
   }
 }

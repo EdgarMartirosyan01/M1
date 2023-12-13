@@ -10,7 +10,7 @@
           {{$t('Наши специалисты будут рады проконсультировать, помочь с выбором и расчетом материала под ваши задачи.')}}
         </div>
       </div>
-      <div class="footer__top__form-container">
+      <div class="footer__top__form-container footer-form">
         <el-form
             ref="formRef"
             :model="dynamicValidateForm"
@@ -204,6 +204,13 @@ export default {
           padding: 13px 43px;
           border: none;
           background: #DF2129;
+          cursor: pointer;
+        }
+        button:hover {
+          background: white;
+          border: 2px solid #000;
+          color: black;
+          transition: 0.3s;
         }
       }
     }
