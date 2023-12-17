@@ -406,3 +406,24 @@
     }
   }
 }
+@media(max-width: 573px) {
+  .contacts-form {
+    .el-input__inner {
+      width: 350px;
+    }
+  }
+}
+@media(max-width: 461px) {
+  .contacts-form {
+    .el-input__inner {
+      width: 250px;
+    }
+  }
+}
+@media(max-width: 365px) {
+  .contacts-form {
+    .el-input__inner {
+      width: 150px;
+    }
+  }
+}
