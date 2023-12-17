@@ -1,9 +1,9 @@
 <template>
   <div class="landing-page">
-    <div id="header">
-      <HeaderMenu/>
-    </div>
+    <HeaderMenu/>
+    <div id="layout">
       <router-view/>
+    </div>
     <FooterMenu/>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
   overflow-y: auto !important;
   scroll-behavior: smooth;
 }
-#header {
-  padding-bottom: 169px;;
+#layout {
+  padding-top: 169px;
 }
 </style>

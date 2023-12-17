@@ -181,4 +181,47 @@ export default {
     }
   }
 }
+@media(max-width: 992px) {
+  .contacts {
+    padding: 60px 32px 100px 32px;
+    &__title {
+    }
+    &__container {
+      width: 100%;
+      height: 100%;
+      gap: 72px;
+      &__info {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 0 32px;
+        gap: 100px;
+        &__item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 15px;
+          padding-top: 65px;
+          &__icon {
+          }
+          &__description {
+            color: #000;
+            text-align: center;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+      &__form {
+        padding-bottom: 65px;
+      }
+    }
+  }
+}
 </style>

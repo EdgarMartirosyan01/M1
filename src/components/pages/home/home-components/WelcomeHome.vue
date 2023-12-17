@@ -52,6 +52,14 @@ export default {
         font-weight: 400;
         line-height: 30px;
       }
+      li:before {
+        content: "\2022";
+        color: red;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+      }
     }
   }
 }
