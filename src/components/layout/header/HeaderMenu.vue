@@ -13,37 +13,18 @@
       </div>
     </div>
     <div class="header__menu-mobile">
-      <div class="header__menu-mobile__burger" @click="toggleMenu">
-        <img src="@/assets/icons/BurgerMenu.svg" alt="Open Menu">
+      <div class="header__menu-mobile__button">
+        <img src="@/assets/icons/BurgerMenu.svg" alt="Construction" @click="drawer = true">
       </div>
-      <transition
-          name="slide"
-          @before-enter="beforeEnter"
-          @enter="enter"
-          @leave="leave"
-      >
-        <div v-if="menuOpen" class="header__menu-mobile__navbar">
-          <div class="header__menu-mobile__navbar__button">
-            <img src="@/assets/icons/Close.svg" alt="Close Menu" @click="toggleMenu">
-          </div>
-          <div class="header__menu-mobile__navbar__routes">
-            <div
-                class="header__menu-mobile__navbar__routes__item"
-                v-for="item in menuItems"
-                :key="item.id"
-            >
-              <a
-                 :href="item.route"
-                 class="header__menu-mobile__navbar__routes__item__link"
-                 :key="item"
-                 @click="handleClickMenu(item)"
-              >
-                {{ $t(item.title) }}
-              </a>
-            </div>
+      <el-drawer v-model="drawer" title="I am the title" :with-header="false">
+        <div class="header__menu-mobile__item-container">
+          <div class="header__menu-mobile__item-container__items" v-for="item in menuItems" :key="item.id">
+            <a :href="item.route" class="header__menu-mobile__item-container__items__link" :key="item" @click="handleClickMenu(item)">
+              {{ $t(item.title) }}
+            </a>
           </div>
         </div>
-      </transition>
+      </el-drawer>
     </div>
   </div>
 </template>
@@ -57,26 +38,10 @@ export default {
     return {
       menuItems: LandingMenuItems,
       menuOpen: false,
+      drawer: false,
     }
   },
   methods: {
-    toggleMenu() {
-      this.menuOpen = !this.menuOpen;
-    },
-    beforeEnter(el) {
-      el.style.transform = "translateX(100%)";
-    },
-    enter(el, done) {
-      el.offsetHeight; // trigger reflow
-      el.style.transition = "transform 0.5s ease-in-out";
-      el.style.transform = "translateX(0)";
-      done();
-    },
-    leave(el, done) {
-      el.style.transition = "transform 0.5s ease-in-out";
-      el.style.transform = "translateX(100%)";
-      done();
-    },
     handleClickMenu(linkId) {
       this.$emit('handleClickMenu', linkId);
       this.menuOpen = false;
@@ -136,12 +101,6 @@ export default {
   &__menu-mobile {
     display: none;
   }
-}
-.slide-enter-active, .slide-leave-active {
-  transition: transform 0.5s ease-in-out;
-}
-.slide-enter, .slide-leave-to {
-  transform: translateX(100%);
 }
 @media(max-width: 1668px) {
   .header {
@@ -207,87 +166,53 @@ export default {
     }
     &__menu-mobile {
       display: flex;
-      align-items: flex-end;
-      position: relative;
-      &__burger {
+      align-items: center;
+      justify-content: center;
+      &__button {
+        img {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+        }
+        img:hover {
+          transition: 0.3s;
+          opacity: 0.7;
+        }
+      }
+      &__item-container {
         width: 100%;
         height: 100%;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-          cursor: pointer;
-          width: 40px;
-          height: 40px;
-        }
-        img:hover {
-          opacity: 0.8;
-          transition: 0.5s;
-        }
-      }
-      &__navbar {
-        width: 400px;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         flex-direction: column;
-        background: linear-gradient(90deg, rgba(137,135,138,1) 20%, rgba(52,52,52,1) 95%);
-        position: absolute;
-        z-index: 333;
-        top: 0;
-        right: -85px;
-        box-shadow: 0 1px 1px rgba(0,0,0,0.12),
-        0 2px 2px rgba(0,0,0,0.12),
-        0 4px 4px rgba(0,0,0,0.12),
-        0 8px 8px rgba(0,0,0,0.12),
-        0 16px 16px rgba(0,0,0,0.12);
-        &__button {
-          position: relative;
-          top: 50px;
-          right: -310px;
-          width: 100%;
-          img {
-            width: 40px;
-            height: 40px;
-            cursor: pointer;
-          }
-          img:hover {
-            opacity: 0.7;
-            transition: 0.5s;
-          }
-        }
-        &__routes {
-          width: 100%;
-          height: 100%;
+        align-items: flex-start;
+        justify-content: center;
+        &__items {
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
-          &__item {
+          width: 100%;
+          padding: 30px 16px;
+          cursor: pointer;
+          &__link {
+            color: #FFF;
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-family: Montserrat;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 30px;
+            text-decoration: none;
             width: 100%;
-            padding: 32px 16px;
-            cursor: pointer;
-            &__link {
-              color: #FFF;
-              text-decoration: none;
-              font-feature-settings: 'clig' off, 'liga' off;
-              font-family: Montserrat;
-              font-size: 26px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 30px;
-            }
           }
-          &__item:hover {
-            background: linear-gradient(90deg, rgba(52,52,52,1) 14%, rgba(137,135,138,1) 75%);
-            transition: 0.5s;
-            box-shadow: 0 1px 1px rgba(0,0,0,0.12),
-            0 2px 2px rgba(0,0,0,0.12),
-            0 4px 4px rgba(0,0,0,0.12),
-            0 8px 8px rgba(0,0,0,0.12),
-            0 16px 16px rgba(0,0,0,0.12);
-          }
+        }
+        &__items:hover {
+          background: linear-gradient(90deg, rgba(137,135,138,1) 13%, rgba(52,52,52,1) 79%);
+          box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+          0 2px 2px rgba(0,0,0,0.12),
+          0 4px 4px rgba(0,0,0,0.12),
+          0 8px 8px rgba(0,0,0,0.12),
+          0 16px 16px rgba(0,0,0,0.12);
+          transition: 0.5s;
         }
       }
     }
@@ -307,5 +232,19 @@ export default {
     }
   }
 }
-
+@media(max-width: 790px) {
+  .header {
+    &__menu-mobile {
+      &__item-container {
+        &__items {
+          &__link {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
