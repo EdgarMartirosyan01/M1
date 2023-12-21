@@ -224,8 +224,7 @@ export default {
     &__info {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 50px 223px 105px 223px;
+      padding: 50px 68px 105px 68px;
       &__logo {
         display: flex;
         align-items: center;
@@ -237,7 +236,7 @@ export default {
       }
       &__initials {
         display: flex;
-        align-items: flex-start;
+        align-items: flex-end;
         flex-direction: column;
         justify-content: center;
         gap: 19px;
@@ -286,7 +285,7 @@ export default {
     }
     &__bottom {
       &__info {
-        padding: 50px 223px 105px 223px;
+        padding: 50px 68px 105px 68px;
       }
       &__rights {
         padding: 0 68px 35px 68px;
@@ -307,7 +306,7 @@ export default {
     }
     &__bottom {
       &__info {
-        padding: 50px 180px 105px 180px;
+        padding: 50px 68px 105px 68px;
       }
       &__rights {
         padding: 0 68px 35px 68px;
@@ -328,7 +327,7 @@ export default {
     }
     &__bottom {
       &__info {
-        padding: 50px 84px 105px 84px;
+        padding: 50px 68px 105px 68px;
       }
       &__rights {
         padding: 0 68px 35px 68px;
@@ -350,7 +349,7 @@ export default {
         padding: 50px 32px 105px 32px;
       }
       &__rights {
-        padding: 0 68px 35px 68px;
+        padding: 0 32px 35px 32px;
       }
     }
   }
@@ -379,7 +378,7 @@ export default {
     }
     &__bottom {
       &__info {
-        padding: 50px 84px 105px 84px;
+        padding: 50px 68px 105px 68px;
       }
       &__rights {
         padding: 0 68px 35px 68px;
@@ -410,9 +409,9 @@ export default {
     &__info {
       padding: 50px 32px 105px 32px;
       }
-    }
     &__rights {
-      padding: 0 68px 35px 68px;
+      padding: 0 32px 35px 32px;
+    }
     }
   }
 }
@@ -453,6 +452,7 @@ export default {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 16px;
         span {
           font-size: 16px;
         }

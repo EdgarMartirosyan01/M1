@@ -161,6 +161,9 @@
   line-height: normal;
   font-variant: small-caps;
 }
+.el-table {
+  --el-table-border: none !important;
+}
 .delivery-table {
   width: 100%;
   display: flex;
@@ -185,12 +188,12 @@
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 22px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     font-variant: small-caps;
-    padding: 39px 0;
+    padding: 25px 0;
   }
   .el-table__border-left-patch {
     background-color: #DF2129;
@@ -199,12 +202,12 @@
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 22px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     font-variant: small-caps;
-    padding: 36px 23px;
+    padding: 25px 23px;
   }
   .el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf {
     border-bottom: 1px solid rgba(223, 33, 41, 0.59) !important;
@@ -212,7 +215,6 @@
   .el-table {
     --el-table-border-color: rgba(223, 33, 41, 0.59);
     max-width: 1920px;
-    --el-table-border: 1px solid var(--el-table-border-color);
     --el-table-row-hover-bg-color: rgba(223, 33, 41, 0.09);
   }
   .el-scrollbar__thumb {
@@ -252,7 +254,7 @@
     font-weight: 700;
     line-height: 16px;
     text-transform: capitalize;
-    padding: 42px 32px;
+    padding: 42px 0;
     background: #DF2129;
   }
   .el-table__border-left-patch {
@@ -262,7 +264,7 @@
     color: #000;
     text-align: center;
     font-family: Montserrat;
-    font-size: 22px;
+    font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -281,6 +283,13 @@
   .el-scrollbar__thumb {
     background-color: rgba(223, 33, 41, 0.59);
     border: 1px solid red;
+  }
+}
+.company {
+  .el-carousel__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .wall-blocks {
@@ -313,9 +322,43 @@
   0 8px 8px rgba(0,0,0,0.12),
   0 16px 16px rgba(0,0,0,0.12);
 }
+@media(max-width: 729px) {
+  .wall-blocks {
+    .el-carousel__container {
+      height: 400px;
+    }
+  }
+}
+@media(max-width: 500px) {
+  .wall-blocks {
+    .el-carousel__container {
+      height: 250px;
+    }
+  }
+}
 @media(max-width: 790px) {
-  .el-drawer__body {
-    min-width: 400px;
+  .el-drawer.rtl {
+    width: 35% !important;
+  }
+}
+@media(max-width: 614px) {
+  .el-drawer.rtl {
+    width: 40% !important;
+  }
+}
+@media(max-width: 522px) {
+  .el-drawer.rtl {
+    width: 50% !important;
+  }
+}
+@media(max-width: 422px) {
+  .el-drawer.rtl {
+    width: 60% !important;
+  }
+}
+@media(max-width: 370px) {
+  .el-drawer.rtl {
+    width: 80% !important;
   }
 }
 @media(max-width: 593px) {

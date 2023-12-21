@@ -179,4 +179,12 @@ export default {
     }
   }
 }
+@media(max-width: 343px) {
+  .criteria {
+    &__title {
+      font-size: 25px;
+      width: 250px;
+    }
+  }
+}
 </style>
