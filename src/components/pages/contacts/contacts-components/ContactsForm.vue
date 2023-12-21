@@ -224,4 +224,24 @@ export default {
     }
   }
 }
+@media(max-width: 761px) {
+  .contacts {
+    &__container {
+      &__info {
+        gap: 32px;
+        &__item {
+          gap: 15px;
+          padding-top: 32px;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 373px) {
+  .contacts {
+    &__title {
+      font-size: 50px;
+    }
+  }
+}
 </style>

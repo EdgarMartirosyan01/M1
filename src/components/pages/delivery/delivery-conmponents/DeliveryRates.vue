@@ -112,14 +112,23 @@ export default {
           font-variant: small-caps;
         }
       }
+      &__item:hover {
+        background: #e5e5e5;
+      }
     }
   }
 }
 #table-title-container {
   background: #DF2129;
 }
+#table-title-container:hover {
+  background: #c22128;
+}
 #table-rose-container {
   background: rgba(223, 33, 41, 0.09);
+}
+#table-rose-container:hover {
+  background: rgba(91, 4, 8, 0.47);
 }
 #table-title {
   color: #FFF;

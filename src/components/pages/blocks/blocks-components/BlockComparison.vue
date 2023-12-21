@@ -85,4 +85,19 @@ export default {
     padding: 60px 32px 100px 32px;
   }
 }
+@media(max-width: 839px) {
+  .characteristics {
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+@media(max-width: 650px) {
+  .characteristics {
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
 </style>
