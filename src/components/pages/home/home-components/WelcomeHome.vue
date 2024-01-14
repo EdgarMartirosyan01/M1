@@ -1,13 +1,18 @@
 <template>
   <div class="welcome">
+    <div class="welcome__top">
+      {{$t('Мы являемся 1-м заводом производителем полистиролбетонных блоков в Армении.')}}
+    </div>
     <div class="welcome__title">
-      {{$t('ПРОИЗВОДСТВО ПОЛИСТИРОЛБЕТОНА ИННОВАЦИОННОГО ЭНЕРГОЭФФЕКТИВНОГО')}} <span>{{$t('ЛЕГКОГО БЕТОНА')}}</span>
+      {{$t('ПРОИЗВОДСТВО ПОЛИСТИРОЛБЕТОНА ИННОВАЦИОННОГО ЭНЕРГОЭФФЕКТИВНОГО')}}
+      <span>{{$t('ЛЕГКОГО БЕТОНА')}}</span>
+      {{$t('Высокого качества по доступной цене!')}}
     </div>
     <div class="welcome__list">
       <ul>
-        <li>{{$t('Оказываем услуги по заливке и утеплению полистиролбетоном')}}</li>
-        <li>{{$t('Строим быстровозводимые энергоэффективные дома')}}</li>
         <li>{{$t('Производим современные строительные материалы из полистиролбетона высокого качества')}}</li>
+        <li>{{$t('Строим комбинированные быстровозводимые энергоэффективные, современные ЭКО дома 21 века.')}}</li>
+        <li>{{$t('Оказываем услуги по заливке и утеплению полистиролбетоном')}}</li>
       </ul>
     </div>
   </div>
@@ -25,8 +30,19 @@ export default {
   flex-direction: column;
   gap: 53px;
   width: 100%;
-  padding: 110px 0 110px 230px;
+  padding: 60px 0 110px 230px;
   background: linear-gradient(90deg, rgba(52,52,52,1) 14%, rgba(137,135,138,1) 75%);
+  &__top {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 75px;
+    text-transform: capitalize;
+    max-width: 100%;
+    padding-right: 81px;
+  }
   &__title {
     color: #FFF;
     font-family: Montserrat;

@@ -28,6 +28,6 @@ export default {
   scroll-behavior: smooth;
 }
 #layout {
-  padding-top: 169px;
+  padding-top: 98px;
 }
 </style>

@@ -25,4 +25,9 @@ export default {
     0 16px 16px rgba(0,0,0,0.12);
   }
 }
+@media(max-width: 1310px) {
+  .map-container {
+    padding: 0 32px 100px 32px;
+  }
+}
 </style>

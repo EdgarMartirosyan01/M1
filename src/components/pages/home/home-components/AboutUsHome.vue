@@ -17,9 +17,11 @@
           <span>{{$t('Мы любим свою работу и отвечаем за качество всех услуг и продукции, которые получают наши клиенты.')}}</span>
         </div>
         <div class="about-home__top__info-container__button">
-          <button>
-            {{$t('Подробнее о компании')}}
-          </button>
+          <router-link to="/about">
+            <button>
+              {{$t('Подробнее о компании')}}
+            </button>
+          </router-link>
         </div>
       </div>
     </div>
@@ -30,7 +32,7 @@
       <div class="about-home__bottom__container">
         <div class="about-home__bottom__container__left">
           <div class="about-home__bottom__container__left__image">
-            <img src="@/assets/images/products/ProductIcon2.png" alt="M1">
+            <img src="@/assets/images/products/BlockPhotoV.jpg" alt="M1">
           </div>
           <div class="about-home__bottom__container__left__title">
             {{$t('Производство полистиролбетона')}}
@@ -41,18 +43,20 @@
         </div>
         <div class="about-home__bottom__container__right">
           <div class="about-home__bottom__container__right__image">
-            <img src="@/assets/images/products/ProductIcon1.png" alt="M1">
+            <img src="@/assets/images/products/BlockHomeV.jpg" alt="M1">
           </div>
           <div class="about-home__bottom__container__right__title">
             {{$t('Строительство малоэтажных домов')}}
           </div>
           <div class="about-home__bottom__container__right__description">
-            {{$t('Услуга полного цикла: мы берем на себя все работы, от подготовки проектной документации до изготовления домокомплекта и сдачи дома. Максимально учитываем пожелания заказчика, чтобы построить эстетичный, качественный и надежный дом.')}}
+            {{$t('Компания готова к сотрудничеству как с крупными и малыми строительными организациями, так и с частными клиентами и заказчиками. Мы дорожим своим именем, а потому вся наша продукция производиться исключительно из надежных компонентов и проходит жесткий контроль качества на каждом этапе изготовления. Выпускаемые изделия, обеспечены всей необходимой документацией - сертификатами соответствия, пожарной безопасности и санитарно-эпидемиологическими заключениями.')}}
           </div>
           <div class="about-home__bottom__container__right__button">
-            <button>
-              {{$t('Подробнее об услугах')}}
-            </button>
+            <router-link to="/services">
+              <button>
+                {{$t('Подробнее об услугах')}}
+              </button>
+            </router-link>
           </div>
         </div>
       </div>
@@ -167,7 +171,7 @@ export default {
     }
   }
   &__bottom {
-    padding: 60px 175px;
+    padding: 60px 0;
     &__title {
       color: #000;
       font-family: Montserrat;
@@ -176,7 +180,7 @@ export default {
       font-weight: 700;
       line-height: normal;
       text-transform: capitalize;
-      padding: 40px 0 30px 0;
+      padding: 40px 0 64px 0;
       span {
         color: #DF2129 !important;
       }

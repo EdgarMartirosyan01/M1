@@ -7,11 +7,7 @@
       {{$t('Работаем только с надежными поставщиками')}}
     </div>
     <div class="partners__container">
-      <img src="@/assets/images/partners/Partner1.png" alt="Partner">
       <img src="@/assets/images/partners/Partner2.png" alt="Partner">
-      <img src="@/assets/images/partners/Partner3.png" alt="Partner">
-      <img src="@/assets/images/partners/Partner4.png" alt="Partner">
-      <img src="@/assets/images/partners/Partner5.png" alt="Partner">
     </div>
   </div>
 </template>

@@ -53,7 +53,7 @@ export default {
 <style lang="scss">
 .header {
   width: 100%;
-  height: 169px;
+  height: 98px;
   background: linear-gradient(90deg, rgba(52,52,52,1) 14%, rgba(137,135,138,1) 75%);
   display: flex;
   align-content: center;
@@ -71,8 +71,8 @@ export default {
     align-items: center;
     justify-content: center;
     img {
-      width: 287px;
-      height: 103px;
+      width: 156px;
+      height: 56px;
     }
   }
   &__routes {
@@ -82,7 +82,6 @@ export default {
     gap: 30px;
     &__item {
       display: flex;
-      padding: 106px 0 33px 0;
       &__link {
         color: #FFF;
         font-family: Montserrat;
@@ -107,7 +106,6 @@ export default {
     padding: 0 180px 0 180px;
     &__routes {
       &__item {
-        padding: 84px 0 26px 0;
       }
     }
   }
@@ -117,7 +115,6 @@ export default {
     padding: 0 84px 0 84px;
     &__routes {
       &__item {
-        padding: 100px 0 26px 0;
       }
     }
   }
@@ -127,7 +124,6 @@ export default {
     padding: 0 32px 0 32px;
     &__routes {
       &__item {
-        padding: 100px 0 26px 0;
       }
     }
   }
@@ -135,28 +131,19 @@ export default {
 @media(max-width: 1310px) {
   .header {
     padding: 0 32px 0 32px;
-    &__logo {
-      img {
-        width: 156px;
-        height: 56px;
-      }
-    }
     &__routes {
       gap: 25px;
       &__item {
         display: flex;
-        padding: 106px 0 33px 0;
         &__link {
         }
       }
     }
   }
 }
-@media(max-width: 1174px) {
+@media(max-width: 991px) {
   .header {
     padding: 0 84px 0 84px;
-    &__logo {
-    }
     &__routes {
       display: none;
       &__item {
@@ -185,14 +172,16 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 98px;
         &__items {
           display: flex;
           align-items: center;
           justify-content: center;
           width: 100%;
-          padding: 30px 16px;
+          padding: 24px 16px;
           cursor: pointer;
+          border-bottom: 0.5px solid gray;
           &__link {
             color: #FFF;
             font-feature-settings: 'clig' off, 'liga' off;
@@ -221,8 +210,6 @@ export default {
 @media(max-width: 992px) {
   .header {
     padding: 0 32px 0 32px;
-    &__logo {
-    }
     &__routes {
       display: none;
       &__item {
