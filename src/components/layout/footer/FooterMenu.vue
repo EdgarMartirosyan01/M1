@@ -60,9 +60,9 @@
           <img src="@/assets/images/M1-Footer.png" alt="M1">
         </div>
         <div class="footer__bottom__info__initials">
-          <span>{{$t('Адрес TestStreet 14/4')}}</span>
-          <span>{{$t('Номер TestPhoneNumber')}}</span>
-          <span>{{$t('Email TestMail.ru')}}</span>
+          <span>Адрес : РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.</span>
+          <span>Номер : TestPhoneNumber</span>
+          <span>Email : m1groupearmenia@gmail.com</span>
         </div>
       </div>
       <div class="footer__bottom__rights">

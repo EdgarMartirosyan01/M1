@@ -20,23 +20,23 @@ export const MENU_ITEMS = {
     CONTACTS: new MenuItem('Контакты', 'contacts', ROUTES.CONTACTS.route),
     ABOUT: new MenuItem('О нас', 'about', ROUTES.ABOUT.route),
     HOME: new MenuItem('HOME', 'home', ROUTES.BLOCKS.route),
-    PRODUCTS: new MenuItem('Продукция', 'products', null, null, null),
+    // PRODUCTS: new MenuItem('Продукция', 'products', null, null, null),
     PORTFOLIO: new MenuItem('Портфолио', 'portfolio', ROUTES.PORTFOLIO.route),
     DELIVERY: new MenuItem('Доставка', 'delivery', ROUTES.DELIVERY.route)
 }
 export const LandingMenuItems = [
     MENU_ITEMS.BLOCKS,
     MENU_ITEMS.SERVICES,
-    new MenuItem(
-        MENU_ITEMS.PRODUCTS.title,
-        MENU_ITEMS.PRODUCTS.id,
-        MENU_ITEMS.PRODUCTS.route,
-        MENU_ITEMS.PRODUCTS.icon,
-        MENU_ITEMS.PRODUCTS.content,
-        [
-
-        ]
-    ),
+    // new MenuItem(
+    //     MENU_ITEMS.PRODUCTS.title,
+    //     MENU_ITEMS.PRODUCTS.id,
+    //     MENU_ITEMS.PRODUCTS.route,
+    //     MENU_ITEMS.PRODUCTS.icon,
+    //     MENU_ITEMS.PRODUCTS.content,
+    //     [
+    //
+    //     ]
+    // ),
     MENU_ITEMS.CONTACTS,
     MENU_ITEMS.ABOUT,
     MENU_ITEMS.PORTFOLIO,

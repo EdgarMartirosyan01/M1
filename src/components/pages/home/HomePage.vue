@@ -7,6 +7,9 @@
       <ProductionHome/>
     </div>
     <div>
+      <InfoHome/>
+    </div>
+    <div>
       <AboutUsHome/>
     </div>
     <div>
@@ -20,10 +23,11 @@ import ProductionHome from "@/components/pages/home/home-components/ProductionHo
 import AboutUsHome from "@/components/pages/home/home-components/AboutUsHome.vue";
 import CriteriaHome from "@/components/pages/home/home-components/CriteriaHome.vue";
 import WelcomeHome from "@/components/pages/home/home-components/WelcomeHome.vue";
+import InfoHome from "@/components/pages/home/home-components/InfoHome.vue";
 
 export default {
   name: "HomePage",
-  components: {WelcomeHome, CriteriaHome, AboutUsHome, ProductionHome}
+  components: {InfoHome, WelcomeHome, CriteriaHome, AboutUsHome, ProductionHome}
 }
 </script>
 

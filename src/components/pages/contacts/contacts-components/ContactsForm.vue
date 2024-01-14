@@ -10,7 +10,7 @@
             <img src="@/assets/images/contactsIcons/location.svg" alt="Contacts">
           </div>
           <div class="contacts__container__info__item__description">
-            EVN  5/7 Str., Yerevan, Armenia
+            РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.
           </div>
         </div>
         <div class="contacts__container__info__item">
@@ -26,7 +26,7 @@
             <img src="@/assets/images/contactsIcons/mail.svg" alt="Contacts">
           </div>
           <div class="contacts__container__info__item__description">
-            example@mail.ru
+            m1groupearmenia@gmail.com
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@ export default {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 100px;
+      gap: 64px;
       &__item {
         display: flex;
         flex-direction: column;
@@ -169,16 +169,22 @@ export default {
         &__description {
           color: #000;
           text-align: center;
-          font-family: Inter;
-          font-size: 16px;
+          font-family: Montserrat;
+          font-size: 14px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+          max-width: 160px;
         }
       }
     }
     &__form {
     }
+  }
+}
+@media(max-width: 1310px) {
+  .contacts {
+    padding: 60px 32px 100px 32px;
   }
 }
 @media(max-width: 992px) {
@@ -211,7 +217,7 @@ export default {
             color: #000;
             text-align: center;
             font-family: Inter;
-            font-size: 16px;
+            font-size: 14px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;

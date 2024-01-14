@@ -11,6 +11,10 @@
     <div>
       <DeliveryRates/>
     </div>
+
+    <div>
+      <ImportantInfo/>
+    </div>
   </div>
 </template>
 
@@ -18,10 +22,11 @@
 import DeliveryInfo from "@/components/pages/delivery/delivery-conmponents/DeliveryInfo.vue";
 import DeliveryTable from "@/components/pages/delivery/delivery-conmponents/DeliveryTable.vue";
 import DeliveryRates from "@/components/pages/delivery/delivery-conmponents/DeliveryRates.vue";
+import ImportantInfo from "@/components/pages/blocks/blocks-components/ImportantInfo.vue";
 
 export default {
   name: "DeliveryPage",
-  components: {DeliveryRates, DeliveryTable, DeliveryInfo}
+  components: {ImportantInfo, DeliveryRates, DeliveryTable, DeliveryInfo}
 }
 </script>
 
