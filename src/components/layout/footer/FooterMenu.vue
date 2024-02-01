@@ -48,7 +48,7 @@
           </el-form-item>
         </el-form>
         <div class="footer__top__form-container__button">
-          <button @click="submitForm">
+          <button @click="sendEmail">
             {{$t('Отправить заявку')}}
           </button>
         </div>
@@ -78,6 +78,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "FooterMenu",
   data() {
@@ -127,17 +129,17 @@ export default {
     }
   },
   methods: {
-    // submitForm() {
-    //   this.$refs.formRef.validate((valid) => {
-    //     if (valid) {
-    //       console.log('submit!');
-    //     } else {
-    //       console.log('error submit!');
-    //       return false;
-    //     }
-    //   });
-    // },
-  },
+    async sendEmail() {
+      try {
+        console.log(this.dynamicValidateForm)
+        let res = await axios.post('http://localhost:8000/send-mail', this.dynamicValidateForm)
+        console.log('RES => ', res)
+      } catch (e) {
+        console.error('err => ', e)
+      }
+
+    }
+  }
 }
 </script>
 

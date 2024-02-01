@@ -40,8 +40,8 @@ export default {
     font-weight: 700;
     line-height: 75px;
     text-transform: capitalize;
-    max-width: 100%;
     padding-right: 81px;
+    max-width: 748px;
   }
   &__title {
     color: #FFF;
@@ -98,6 +98,11 @@ export default {
   .welcome {
     padding: 80px 32px 80px 32px;
     gap: 38px;
+    &__top {
+      font-size: 38px;
+      line-height: 60px;
+      max-width: 100%;
+    }
     &__title {
       font-size: 38px;
       line-height: 60px;
@@ -112,6 +117,11 @@ export default {
   .welcome {
     padding: 80px 32px 80px 32px;
     gap: 38px;
+    &__top {
+      font-size: 28px;
+      line-height: 48px;
+      max-width: 100%;
+    }
     &__title {
       font-size: 28px;
       line-height: 48px;
@@ -130,6 +140,10 @@ export default {
 @media(max-width: 430px) {
   .welcome {
     gap: 38px;
+    &__top {
+      font-size: 22px;
+      line-height: 38px;
+    }
     &__title {
       font-size: 22px;
       line-height: 38px;
