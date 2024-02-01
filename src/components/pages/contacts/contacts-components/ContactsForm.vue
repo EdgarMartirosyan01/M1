@@ -35,36 +35,29 @@
             ref="formRef"
             :model="dynamicValidateForm"
             :size="formSize"
+            @submit="handleSubmit"
         >
-            <el-form-item
-                prop="fullName"
-                :rules="fullNameValidation">
-              <el-input
-                  placeholder="ФИО*"
-                  input-style="background"
-                  v-model="dynamicValidateForm.fullName"
-              />
-            </el-form-item>
-            <el-form-item
-                prop="email"
-                :rules="emailValidationRules"
-            >
-              <el-input
-                  placeholder="E-mail*"
-                  v-model="dynamicValidateForm.email"
-              />
-            </el-form-item>
-          <el-form-item
-              prop="message"
-              :rules="messageValidation"
-          >
-              <el-input
-                  placeholder="Ваше сообщение*"
-                  v-model="dynamicValidateForm.message"
-                  type="textarea"
-              />
+          <el-form-item prop="fullName" :rules="fullNameValidation">
+            <el-input
+                placeholder="ФИО*"
+                input-style="background"
+                v-model="dynamicValidateForm.fullName"
+            />
           </el-form-item>
-          <el-button>
+          <el-form-item prop="email" :rules="emailValidationRules">
+            <el-input
+                placeholder="E-mail*"
+                v-model="dynamicValidateForm.email"
+            />
+          </el-form-item>
+          <el-form-item prop="message" :rules="messageValidation">
+            <el-input
+                placeholder="Ваше сообщение*"
+                v-model="dynamicValidateForm.message"
+                type="textarea"
+            />
+          </el-form-item>
+          <el-button @click="sendEmail">
             {{$t('Отправить')}}
           </el-button>
         </el-form>
@@ -74,6 +67,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "ContactsForm",
   data() {
@@ -122,6 +117,18 @@ export default {
       },
     }
   },
+  methods: {
+    async sendEmail() {
+      try {
+        console.log(this.dynamicValidateForm)
+        let res = await axios.post('http://localhost:8000/send-mail', this.dynamicValidateForm)
+        console.log('RES => ', res)
+      } catch (e) {
+        console.error('err => ', e)
+      }
+
+    }
+  }
 }
 </script>
 
