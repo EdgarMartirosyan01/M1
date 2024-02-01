@@ -21,6 +21,8 @@ export default {
 <style scoped lang="scss">
 .partners {
   display: flex;
+  align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   width: 100%;
   padding: 100px 72px;
@@ -62,13 +64,13 @@ export default {
     }
   }
 }
-@media(max-width: 1541px) {
-  .partners {
-    &__container {
-      justify-content: center;
-    }
-  }
-}
+//@media(max-width: 1541px) {
+//  .partners {
+//    &__container {
+//      justify-content: center;
+//    }
+//  }
+//}
 @media(max-width: 1383px) {
   .partners {
     padding: 100px 32px;
