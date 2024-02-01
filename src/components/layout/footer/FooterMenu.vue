@@ -250,7 +250,6 @@ export default {
           font-style: normal;
           font-weight: 700;
           line-height: 30px;
-          cursor: pointer;
         }
         span:hover {
           transition: 0.3s;
