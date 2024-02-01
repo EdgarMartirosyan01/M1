@@ -1,7 +1,7 @@
 <template>
   <div class="map-container">
     <div class="map-container__map">
-      <iframe src="https://snazzymaps.com/embed/557232" width="100%" height="817px" style="border:none;"></iframe>
+      <iframe src="https://snazzymaps.com/embed/564092" width="100%" height="100%" style="border:none;"></iframe>
     </div>
   </div>
 </template>
