@@ -46,24 +46,20 @@ const routes = [
         redirect: "/error/404",
     },
 ]
+
 const router = createRouter({
     history: createWebHistory(),
     routes,
-    scrollBehavior(to, from, savedPosition) {
+    scrollBehavior(to) {
         if (to.path === '/about' && to.hash) {
             setTimeout(() => {
                 document.getElementsByTagName('html')[0].scrollTop =
                     document.getElementsByTagName('html')[0].scrollHeight
-            })
+            });
         } else {
-            return {behavior: 'smooth',  left: 0, top: 0 };
+            return { behavior: 'smooth', left: 0, top: 0 };
         }
     }
-})
-function routerAuthGuard() {
-        let isAuthenticated = localStorage.getItem('vn_admin_provider_key');
-        if (!isAuthenticated) {
-            return '/'
- }
-}
+});
+
 export default router;

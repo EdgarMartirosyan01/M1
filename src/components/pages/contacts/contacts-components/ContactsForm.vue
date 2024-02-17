@@ -1,33 +1,39 @@
 <template>
   <div class="contacts">
-    <div class="contacts__title">
+    <div class="contacts__title" id="contact-form">
       {{$t('Контакты')}}
     </div>
     <div class="contacts__container">
       <div class="contacts__container__info">
         <div class="contacts__container__info__item">
-          <div class="contacts__container__info__item__icon">
-            <img src="@/assets/images/contactsIcons/location.svg" alt="Contacts">
-          </div>
-          <div class="contacts__container__info__item__description">
-            РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.
-          </div>
+          <a href="#map">
+            <div class="contacts__container__info__item__icon">
+              <img src="@/assets/images/contactsIcons/location.svg" alt="Contacts">
+            </div>
+            <div class="contacts__container__info__item__description">
+                РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.
+            </div>
+          </a>
         </div>
         <div class="contacts__container__info__item">
-          <div class="contacts__container__info__item__icon">
-            <img src="@/assets/images/contactsIcons/phone.svg" alt="Contacts">
-          </div>
-          <div class="contacts__container__info__item__description">
-            +374 77 77 77 77
-          </div>
+          <a href="tel: +374 77 77 77">
+            <div class="contacts__container__info__item__icon">
+              <img src="@/assets/images/contactsIcons/phone.svg" alt="Contacts">
+            </div>
+            <div class="contacts__container__info__item__description">
+                +374 77 77 77 77
+            </div>
+          </a>
         </div>
         <div class="contacts__container__info__item">
-          <div class="contacts__container__info__item__icon">
-            <img src="@/assets/images/contactsIcons/mail.svg" alt="Contacts">
-          </div>
-          <div class="contacts__container__info__item__description">
-            m1groupearmenia@gmail.com
-          </div>
+          <a href="#contact-form">
+            <div class="contacts__container__info__item__icon">
+              <img src="@/assets/images/contactsIcons/mail.svg" alt="Contacts">
+            </div>
+            <div class="contacts__container__info__item__description">
+              m1groupearmenia@gmail.com
+            </div>
+          </a>
         </div>
       </div>
       <div class="contacts__container__form contacts-form">
@@ -171,9 +177,8 @@ export default {
         align-items: center;
         justify-content: center;
         gap: 15px;
-        &__icon {
-        }
-        &__description {
+        cursor: pointer;
+        a {
           color: #000;
           text-align: center;
           font-family: Montserrat;
@@ -181,11 +186,20 @@ export default {
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+          text-decoration: none;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+        }
+        &__icon {
+        }
+        &__description {
           max-width: 160px;
         }
       }
-    }
-    &__form {
+      &__item:hover {
+        opacity: 0.8;
+      }
     }
   }
 }

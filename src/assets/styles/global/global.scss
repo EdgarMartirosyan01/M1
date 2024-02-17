@@ -3,6 +3,10 @@
   src: url("@/assets/styles/fonts/Montserrat-Regular.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -185,6 +189,15 @@
 }
 .el-table {
   --el-table-border: none !important;
+}
+.el-form-item.is-error .el-input__wrapper {
+  box-shadow: none;
+}
+.el-form-item.is-error .el-input__wrapper:hover {
+  box-shadow: none;
+}
+.el-form-item.is-error .el-select-v2__wrapper, .el-form-item.is-error .el-select-v2__wrapper:focus, .el-form-item.is-error .el-textarea__inner, .el-form-item.is-error .el-textarea__inner:focus {
+  box-shadow: 0 1px 0 0 red;
 }
 .delivery-table {
   width: 100%;

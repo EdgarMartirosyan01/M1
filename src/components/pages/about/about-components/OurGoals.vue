@@ -35,7 +35,7 @@
         <div class="goals__container__right__title">
           {{$t('Наш')}} <span>{{$t('подход')}}</span>
         </div>
-        <img src="@/assets/images/about/aboutImage1.png" alt="About Us">
+<!--        <img src="@/assets/images/about/aboutImage1.png" alt="About Us">-->
       </div>
     </div>
   </div>

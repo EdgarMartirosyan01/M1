@@ -97,6 +97,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1920px;
     &__item {
       width: 732px;
       height: 398px;

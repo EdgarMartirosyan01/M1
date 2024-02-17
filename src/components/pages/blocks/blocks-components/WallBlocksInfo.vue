@@ -43,10 +43,13 @@ export default {
           image: require('@/assets/images/products/PolyBlock3.jpg'),
         },
         {
-          image: require('@/assets/images/products/PolyBlock4.jpg'),
+          image: require('@/assets/images/products/Product3.jpg'),
         },
         {
-          image: require('@/assets/images/products/PolyBlock5.jpg'),
+          image: require('@/assets/images/products/Product4.jpg'),
+        },
+        {
+          image: require('@/assets/images/products/Product6.jpg'),
         },
       ]
     }

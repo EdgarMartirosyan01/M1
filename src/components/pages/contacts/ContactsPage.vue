@@ -4,7 +4,7 @@
       <ContactsForm/>
     </div>
 
-    <div>
+    <div id="map">
       <ContactsMap/>
     </div>
   </div>

@@ -15,6 +15,8 @@
       <img src="@/assets/images/portfolio/portfolioImage2.png" alt="Portfolio">
       <img src="@/assets/images/portfolio/portfolioImage3.png" alt="Portfolio">
       <img src="@/assets/images/portfolio/portfolioImage4.png" alt="Portfolio">
+      <img src="@/assets/images/products/Product7.jpg" alt="Portfolio">
+      <img src="@/assets/images/products/Product8.jpg" alt="Portfolio">
     </div>
   </div>
 </template>
