@@ -1,14 +1,14 @@
 <template>
   <div class="about-home">
     <div class="about-home__top">
-      <div class="about-home__top__img-container">
-        <div class="about-home__top__img-container__img1">
-          <img src="@/assets/images/Construction1.png" alt="Construction">
-        </div>
-        <div class="about-home__top__img-container__img2">
-          <img src="@/assets/images/Construction2.png" alt="Construction">
-        </div>
-      </div>
+<!--      <div class="about-home__top__img-container">-->
+<!--        <div class="about-home__top__img-container__img1">-->
+<!--          <img src="@/assets/images/Construction1.png" alt="Construction">-->
+<!--        </div>-->
+<!--        <div class="about-home__top__img-container__img2">-->
+<!--          <img src="@/assets/images/Construction2.png" alt="Construction">-->
+<!--        </div>-->
+<!--      </div>-->
       <div class="about-home__top__info-container">
         <div class="about-home__top__info-container__title">{{$t('о нАС')}}</div>
         <div class="about-home__top__info-container__description">
@@ -187,7 +187,7 @@ export default {
     }
     &__container {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       gap: 266px;
       &__left {
         display: flex;

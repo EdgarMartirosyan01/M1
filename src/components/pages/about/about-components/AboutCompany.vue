@@ -24,13 +24,13 @@ export default {
     blockImage() {
       return [
         {
-          image: require('@/assets/images/carousel-block.png'),
+          image: require('@/assets/images/products/Product5.jpg'),
         },
         {
-          image: require('@/assets/images/carousel-block.png'),
+          image: require('@/assets/images/products/Product4.jpg'),
         },
         {
-          image: require('@/assets/images/carousel-block.png'),
+          image: require('@/assets/images/products/Product6.jpg'),
         },
       ]
     }

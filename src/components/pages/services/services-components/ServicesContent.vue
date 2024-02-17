@@ -15,7 +15,7 @@
         </div>
         <div class="services__container__info__right">
           <div class="services__container__info__right__image">
-            <img src="@/assets/images/products/ProductIcon3.png" alt="M1">
+            <img src="@/assets/images/products/Product1.jpg" alt="M1">
           </div>
           <div class="services__container__info__right__button">
             <button>
@@ -25,11 +25,11 @@
         </div>
       </div>
     </div>
-    <div class="services__images">
-      <img src="@/assets/images/portfolio/portfolioImage2.png" alt="Portfolio">
-      <img src="@/assets/images/portfolio/portfolioImage3.png" alt="Portfolio">
-      <img src="@/assets/images/portfolio/portfolioImage4.png" alt="Portfolio">
-    </div>
+<!--    <div class="services__images">-->
+<!--      <img src="@/assets/images/portfolio/portfolioImage2.png" alt="Portfolio">-->
+<!--      <img src="@/assets/images/portfolio/portfolioImage3.png" alt="Portfolio">-->
+<!--      <img src="@/assets/images/portfolio/portfolioImage4.png" alt="Portfolio">-->
+<!--    </div>-->
   </div>
 </template>
 

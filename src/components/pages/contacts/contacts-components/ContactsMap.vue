@@ -1,5 +1,5 @@
 <template>
-  <div class="map-container">
+  <div class="map-container" id="map">
     <div class="map-container__map">
       <iframe src="https://snazzymaps.com/embed/564092" width="100%" height="100%" style="border:none;"></iframe>
     </div>
