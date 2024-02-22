@@ -40,9 +40,6 @@ export default {
           image: require('@/assets/images/products/PolyBlock2.jpg'),
         },
         {
-          image: require('@/assets/images/products/PolyBlock3.jpg'),
-        },
-        {
           image: require('@/assets/images/products/Product3.jpg'),
         },
         {
