@@ -30,42 +30,42 @@ export default {
     criteriaData() {
       return [
         {
-          icon: require('@/assets/screenShots/ScreenShot1.png'),
+          icon: require('@/assets/screenShots/ScreenShot1.jpg'),
           title: "Биостойкость",
           description: "не способствует образованию плесени и грибка, не повреждается грызунами и насекомыми.",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot2.png'),
+          icon: require('@/assets/screenShots/ScreenShot2.jpg'),
           title: "Огнестойкость",
           description: "Благодаря специальной технологии полистиролбетон не горит (НГ) и не поддерживает горение.",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot3.png'),
+          icon: require('@/assets/screenShots/ScreenShot3.jpg'),
           title: "Влагостойкость",
           description: "Полистиролбетон практически не впитывает влагу, что позволяет отложить устройство фасада, а это значит материал сохраняет свои теплоизоляционные свойства при намокании (в отличии от газоблока!), не требует устройства дорогостоящей защиты фасада, препятствует возникновению плесени.",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot4.png'),
+          icon: require('@/assets/screenShots/ScreenShot4.jpg'),
           title: "Трещиностойкость",
           description: "Способствует минимизации трещин за счет прочности на растяжение при изгибе.",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot5.png'),
+          icon: require('@/assets/screenShots/ScreenShot5.jpg'),
           title: "Долговечность",
           description: "Полистиролбетон выдерживает до 200 циклов замораживания и размораживания",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot6.png'),
+          icon: require('@/assets/screenShots/ScreenShot6.jpg'),
           title: "Экономичность",
           description: "Позволяет экономить на количестве материала, стоимости работ для возведения стен, не требует утепления, экономия на стоимости различных работ. ",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot7.png'),
+          icon: require('@/assets/screenShots/ScreenShot7.jpg'),
           title: "Звукопоглощение",
           description: "Материал с высоким уровнем шумопоглощения. Для тех, кто любит тишину и покой.",
         },
         {
-          icon: require('@/assets/screenShots/ScreenShot8.png'),
+          icon: require('@/assets/screenShots/ScreenShot8.jpg'),
           title: "Энергоэффективность",
           description: "Полистиролбетон идеальный материал для климата в Армении, он не пропускает тепло, зимой в доме будет тепло, а летом прохладно.\n" +
               "Колоссальная экономия Газа на отоплении, а летом электроэнергии на кондиционере.",
@@ -108,7 +108,8 @@ export default {
       &__icon {
         mix-blend-mode: lighten;
         img {
-          mix-blend-mode: lighten;
+          width: 54px;
+          height: 54px;
         }
       }
       &__title {
