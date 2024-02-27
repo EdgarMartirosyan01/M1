@@ -187,7 +187,7 @@ export default {
     }
     &__container {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       gap: 266px;
       &__left {
         display: flex;

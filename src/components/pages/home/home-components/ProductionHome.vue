@@ -141,6 +141,8 @@ export default {
         flex-wrap: wrap;
         gap: 64px;
         max-width: 1920px;
+        width: 100%;
+        justify-content: space-between;
         &__image {
           width: 747px;
           height: 532px;

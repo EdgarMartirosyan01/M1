@@ -17,11 +17,11 @@
           <div class="services__container__info__right__image">
             <img src="@/assets/images/products/Product1.jpg" alt="M1">
           </div>
-          <div class="services__container__info__right__button">
-            <button>
-              {{$t('Консультация')}}
-            </button>
-          </div>
+<!--          <div class="services__container__info__right__button">-->
+<!--            <button>-->
+<!--              {{$t('Консультация')}}-->
+<!--            </button>-->
+<!--          </div>-->
         </div>
       </div>
     </div>
@@ -102,23 +102,23 @@ export default {
             height: 214px;
           }
         }
-        &__button {
-          cursor: pointer;
-          width: 100%;
-          button {
-            color: #FFF;
-            text-align: center;
-            font-feature-settings: 'clig' off, 'liga' off;
-            font-family: Montserrat;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 24px;
-            padding: 13px 83px;
-            background: #DF2129;
-            border: #DF2129;
-          }
-        }
+        //&__button {
+        //  cursor: pointer;
+        //  width: 100%;
+        //  button {
+        //    color: #FFF;
+        //    text-align: center;
+        //    font-feature-settings: 'clig' off, 'liga' off;
+        //    font-family: Montserrat;
+        //    font-size: 16px;
+        //    font-style: normal;
+        //    font-weight: 600;
+        //    line-height: 24px;
+        //    padding: 13px 83px;
+        //    background: #DF2129;
+        //    border: #DF2129;
+        //  }
+        //}
       }
     }
   }
