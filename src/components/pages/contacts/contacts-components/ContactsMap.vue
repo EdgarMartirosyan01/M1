@@ -30,4 +30,18 @@ export default {
     padding: 0 32px 100px 32px;
   }
 }
+@media (max-width: 992px) {
+  .map-container {
+    &__map {
+      height: 650px;
+    }
+  }
+}
+@media (max-width: 560px) {
+  .map-container {
+    &__map {
+      height: 400px;
+    }
+  }
+}
 </style>

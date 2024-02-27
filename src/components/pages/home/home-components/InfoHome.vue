@@ -166,7 +166,7 @@ export default {
     }
   }
 }
-@media(max-width: 512px) {
+@media(max-width: 550px) {
   .criteria {
     &__title {
       font-size: 37px;
@@ -186,19 +186,36 @@ export default {
     }
   }
 }
-@media(max-width: 400px) {
+@media(max-width: 465px) {
   .criteria {
     &__title {
-      font-size: 32px;
+      font-size: 24px;
       width: 300px;
+    }
+    &__container {
+      &__item {
+        gap: 4px;
+        padding-bottom: 24px;
+      }
     }
   }
 }
-@media(max-width: 343px) {
+@media(max-width: 380px) {
   .criteria {
     &__title {
-      font-size: 25px;
-      width: 250px;
+      font-size: 20px;
+      width: 200px;
+    }
+    &__container {
+      &__item {
+        &__title {
+          font-size: 18px;
+          width: 250px;
+        }
+        &__description {
+          font-size: 12px;
+        }
+      }
     }
   }
 }

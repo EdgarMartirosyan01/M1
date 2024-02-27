@@ -168,7 +168,7 @@ export default {
     &__info {
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: center;
       gap: 64px;
       &__item {
