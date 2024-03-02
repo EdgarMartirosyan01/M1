@@ -5,6 +5,9 @@
         <img src="@/assets/images/M1-Logo.png" alt="M1">
       </router-link>
     </div>
+<!--    <div>-->
+<!--      <LanguageSwitcher/>-->
+<!--    </div>-->
     <div class="header__routes">
       <div class="header__routes__item" v-for="item in menuItems" :key="item.id">
         <a :href="item.route" class="header__routes__item__link" :key="item" @click="handleClickMenu(item)">
@@ -31,9 +34,11 @@
 
 <script>
 import {LandingMenuItems} from "@/core/configs/NavbarMenuItems";
+// import LanguageSwitcher from "@/components/layout/header/LanguageSwitcher.vue";
 
 export default {
   name: "HeaderMenu",
+  // components: {LanguageSwitcher},
   data() {
     return {
       menuItems: LandingMenuItems,
