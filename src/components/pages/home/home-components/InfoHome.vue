@@ -13,10 +13,10 @@
           <img :src="item.icon" alt="Icon">
         </div>
         <div class="criteria__container__item__title">
-          {{ item.title }}
+          {{ $t(item.title) }}
         </div>
         <div class="criteria__container__item__description">
-          {{ item.description }}
+          {{ $t(item.description) }}
         </div>
       </div>
     </div>

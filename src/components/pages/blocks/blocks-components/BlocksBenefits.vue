@@ -11,12 +11,12 @@
           <img :src="item.icon" alt="icon">
         </div>
         <div class="benefits__container__item__title">
-          {{ item.title }}
+          {{ $t(item.title) }}
         </div>
         <div class="benefits__container__item__list">
           <ul v-for="(listItem, listIndex) in item.list"
               :key="listIndex">
-            <li> {{ listItem }} </li>
+            <li> {{ $t(listItem) }} </li>
           </ul>
         </div>
       </div>

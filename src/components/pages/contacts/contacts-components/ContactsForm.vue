@@ -11,7 +11,7 @@
               <img src="@/assets/images/contactsIcons/location.svg" alt="Contacts">
             </div>
             <div class="contacts__container__info__item__description">
-                РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.
+              {{$t('РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.')}}
             </div>
           </a>
         </div>
