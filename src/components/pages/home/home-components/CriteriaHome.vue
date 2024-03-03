@@ -86,7 +86,8 @@ export default {
     justify-content: space-between;
     &__item {
       width: 732px;
-      height: 398px;
+      height: 100%;
+      padding-bottom: 50px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
