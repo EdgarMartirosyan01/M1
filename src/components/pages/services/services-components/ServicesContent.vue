@@ -196,7 +196,7 @@ export default {
 @media(max-width: 550px) {
   .services {
     &__title {
-      font-size: 64px;
+      font-size: 52px;
     }
     &__container {
       &__title {
@@ -224,6 +224,9 @@ export default {
 }
 @media(max-width: 428px) {
   .services {
+    &__title {
+      font-size: 36px;
+    }
     &__container {
       &__title {
         font-size: 28px;

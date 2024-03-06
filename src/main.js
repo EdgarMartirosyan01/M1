@@ -9,18 +9,20 @@ import {createI18n} from "vue-i18n";
 import am from "@/core/plugins/translations/am"
 import ru from "@/core/plugins/translations/ru"
 import en from "@/core/plugins/translations/en"
+import {LocalizationService} from "@/core/plugins/LocalizationService";
 
 
 const i18n = createI18n( {
-    locale: "ru",
-    fallbackLocale: "ru",
+    legacy:false,
+    locale: ru,
+    fallbackLocale: ru,
     messages: {
         ru,
         am,
         en
     }
 });
-
+LocalizationService.init(i18n)
 const app = createApp(App);
 app.use(router)
     .use(ElementPlus)

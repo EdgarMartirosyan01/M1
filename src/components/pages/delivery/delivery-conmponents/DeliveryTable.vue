@@ -112,9 +112,21 @@ export default {
 @media(max-width: 1382px) {
   .table {
     padding: 100px 32px;
+  }
+}
+@media(max-width: 540px) {
+  .table {
     &__title {
-      span {
-      }
+      font-size: 38px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+@media(max-width: 404px) {
+  .table {
+    &__title {
+      font-size: 32px;
     }
   }
 }
