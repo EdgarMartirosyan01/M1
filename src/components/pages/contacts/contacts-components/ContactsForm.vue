@@ -127,7 +127,7 @@ export default {
     async sendEmail() {
       try {
         console.log(this.dynamicValidateForm)
-        let res = await axios.post('http://localhost:8000/send-mail', this.dynamicValidateForm)
+        let res = await axios.post('http://m1.weflex.am/send-mail', this.dynamicValidateForm)
         console.log('RES => ', res)
       } catch (e) {
         console.error('err => ', e)
