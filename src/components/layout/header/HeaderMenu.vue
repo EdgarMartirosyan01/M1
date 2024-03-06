@@ -5,9 +5,6 @@
         <img src="@/assets/images/M1-Logo.png" alt="M1">
       </router-link>
     </div>
-    <div>
-      <LanguageSwitcher @language-changed="changeLanguage" />
-    </div>
     <div class="header__routes">
       <div class="header__routes__item" v-for="item in menuItems" :key="item.id">
         <a :href="item.route" class="header__routes__item__link" :key="item" @click="handleClickMenu(item)">
@@ -15,7 +12,13 @@
         </a>
       </div>
     </div>
+    <div class="header__switcher">
+      <LanguageSwitcher />
+    </div>
     <div class="header__menu-mobile">
+      <div class="header__switcher-mobile">
+        <LanguageSwitcher />
+      </div>
       <div class="header__menu-mobile__button">
         <img src="@/assets/icons/BurgerMenu.svg" alt="Construction" @click="drawer = true">
       </div>
@@ -52,6 +55,7 @@ export default {
       this.menuOpen = false;
     },
     changeLanguage(selectedLanguage) {
+      console.log("selectedLanguage",selectedLanguage)
       this.$i18n.locale = selectedLanguage;
     },
   }
@@ -82,6 +86,16 @@ export default {
       width: 156px;
       height: 56px;
     }
+  }
+  &__switcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__switcher-mobile {
+    display: none;
+    align-items: center;
+    justify-content: center;
   }
   &__routes {
     display: flex;
@@ -151,6 +165,12 @@ export default {
 }
 @media(max-width: 991px) {
   .header {
+    &__switcher {
+      display: none;
+    }
+    &__switcher-mobile {
+      display: flex;
+    }
     padding: 0 84px 0 84px;
     &__routes {
       display: none;
@@ -159,10 +179,11 @@ export default {
         }
       }
     }
-    &__menu-mobile {
+      &__menu-mobile {
       display: flex;
       align-items: center;
       justify-content: center;
+      gap: 25px;
       &__button {
         img {
           width: 40px;

@@ -67,10 +67,10 @@
       </div>
       <div class="footer__bottom__rights">
         <span>
-          {{$t('2023 All rights reserved')}}
+          2023 All rights reserved
         </span>
         <span>
-          {{$t('Developed and designed by  Weflex')}}
+          Developed and designed by  Weflex'
         </span>
       </div>
     </div>

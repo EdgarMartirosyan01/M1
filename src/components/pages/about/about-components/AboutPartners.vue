@@ -76,4 +76,11 @@ export default {
     padding: 100px 32px;
   }
 }
+@media(max-width: 400px) {
+  .partners {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}
 </style>

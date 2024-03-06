@@ -1,7 +1,7 @@
 <template>
   <div class="map-container" id="map">
     <div class="map-container__map">
-      <iframe src="https://snazzymaps.com/embed/564092" width="100%" height="100%" style="border:none;"></iframe>
+      <iframe src="https://snazzymaps.com/embed/557232" width="100%" height="817px" style="border:none;"></iframe>
     </div>
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     0 4px 4px rgba(0,0,0,0.12),
     0 8px 8px rgba(0,0,0,0.12),
     0 16px 16px rgba(0,0,0,0.12);
+    overflow: hidden;
   }
 }
 @media(max-width: 1310px) {

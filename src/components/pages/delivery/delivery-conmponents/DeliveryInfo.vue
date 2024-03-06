@@ -169,8 +169,12 @@ export default {
 }
 @media(max-width: 524px) {
   .delivery {
-    &__title {
-      font-size: 50px;
+    &__types {
+      &__title {
+        font-size: 38px;
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
   }
 }
