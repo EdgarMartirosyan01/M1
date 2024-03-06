@@ -105,7 +105,6 @@ export default {
       align-items: flex-start;
       gap: 24px;
       &__icon {
-        mix-blend-mode: lighten;
         img {
           width: 54px;
           height: 54px;
