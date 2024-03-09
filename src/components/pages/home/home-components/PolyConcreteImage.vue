@@ -49,13 +49,13 @@
     &__image {
       img {
         max-width: 700px;
-        width: 100%;
+        width: 90vw;
       }
     }
   }
   .image2 {
     max-width: 715px;
-    width: 100%;
+    width: 90vw;
   }
 }
 @media(max-width: 1150px) {
