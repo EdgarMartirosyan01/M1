@@ -192,6 +192,8 @@ export default {
     "Снижение трудозатрат за счет малого веса в 1,5 раза": "Reduced labor costs due to a weight reduction of 1.5 times",
     "Снижение стоимости 1 кв. м стены за счет материалоемкости в 1,5 - 2 раза": "Reduced cost per square meter of wall due to material consumption by 1.5 - 2 times",
     "Высокая звукоизоляция — блок до 20 см гасит звук до 70 д": "High sound insulation - block up to 20 cm extinguishes sound up to 70 dB",
-
+    "Добавить В Корзину": "Add To Cart",
+    "Корзина": "Basket",
+    "Заказать Сейчас": "Order Now",
 
 }

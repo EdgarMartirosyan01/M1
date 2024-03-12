@@ -16,6 +16,33 @@
     </div>
   </div>
 </template>
+// import ScrollMagic from "scrollmagic";
+// mounted() {
+//   const viewPortWidth = window.innerWidth;
+//   let image = document.getElementById('productionImage');
+//   let imageList = document.getElementById("productionImageList");
+//   let imageWidth = image.getBoundingClientRect().width;
+//   let duration = imageWidth + viewPortWidth;
+//
+//   let controller = new ScrollMagic.Controller();
+//   new ScrollMagic.Scene({
+//     triggerElement: this.$refs.ProductionHome,
+//     triggerHook: 0,
+//     duration: duration,
+//   })
+//       .setPin(this.$refs.ProductionHome)
+//       .addTo(controller)
+//       .on("enter", function (event) {})
+//       .on("progress", (event) => {
+//         const progress = event.progress;
+//         imageList.style.left = progress / 2;
+//       })
+//       .on("leave", function (event) {});
+//
+//   console.log('duration =>',duration);
+//   console.log('imageWidth =>',imageWidth);
+//   console.log('viewPortWidth =>',viewPortWidth);
+// }
 
 <script>
 export default {

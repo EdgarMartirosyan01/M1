@@ -1,16 +1,17 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import store from "@/store"; // Import Vuex store
 import router from "@/router";
 import ElementPlus from "element-plus";
 import 'element-plus/dist/index.css';
 import 'element-plus/theme-chalk/dark/css-vars.css';
 import "@/assets/styles/global/global.scss";
 import {createI18n} from "vue-i18n";
-import am from "@/core/plugins/translations/am"
-import ru from "@/core/plugins/translations/ru"
-import en from "@/core/plugins/translations/en"
+import ScrollMagic from "scrollmagic";
+import am from "@/core/plugins/translations/am";
+import ru from "@/core/plugins/translations/ru";
+import en from "@/core/plugins/translations/en";
 import {LocalizationService} from "@/core/plugins/LocalizationService";
-
 
 const i18n = createI18n( {
     legacy:false,
@@ -22,9 +23,12 @@ const i18n = createI18n( {
         en
     }
 });
-LocalizationService.init(i18n)
+LocalizationService.init(i18n);
+
 const app = createApp(App);
-app.use(router)
+app.use(store)
+    .use(router)
     .use(ElementPlus)
     .use(i18n)
-    .mount('#app')
+    .use(ScrollMagic)
+    .mount('#app');

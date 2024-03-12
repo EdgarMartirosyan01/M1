@@ -44,7 +44,6 @@ export class LocalizationService {
     }
 
     static getLocale() {
-        console.log("555",this.provider.global.locale.value)
         return this.provider.global.locale.value;
     }
 

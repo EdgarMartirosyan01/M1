@@ -31,3 +31,64 @@ export const SUPPORTED_LOCALES = {
 };
 
 export const DEFAULT_LANGUAGE = 'ru'
+
+export const PRODUCT_DATA = [
+    {
+        id: 1,
+        title: "Стеновые Блоки",
+        count: 0,
+        images: [
+            require('@/assets/images/products/Product1.jpg'),
+            require('@/assets/images/products/Product2.jpg'),
+            require('@/assets/images/products/Product4.jpg'),
+            require('@/assets/images/products/Product6.jpg'),
+        ]
+    },
+    {
+        id: 2,
+        title: "Фасадные Блоки",
+        count: 0,
+        images: [
+            require('@/assets/images/products/BlockHomeV.jpg'),
+            require('@/assets/images/products/PolyBlock2.jpg'),
+        ]
+    },
+    {
+        id: 3,
+        title: "Теплоизоляционные Плитки",
+        count: 0,
+        images: [
+            require('@/assets/images/products/TermoBlockWall.jpg'),
+            require('@/assets/images/products/TermoBlockWall2.jpg'),
+        ]
+    },
+    {
+        id: 4,
+        title: "Заборы из Полистиролбетона",
+        count: 0,
+        images: [
+            require('@/assets/images/products/PolyBlock4.jpg'),
+            require('@/assets/images/products/PolyBlock5.jpg'),
+        ]
+    },
+    {
+        id: 5,
+        title: "Армированные перемычки",
+        count: 0,
+        images: [
+            require('@/assets/images/products/ArmorBlock.jpg'),
+        ]
+    },
+    {
+        id: 6,
+        title: "Вибропрессованные блоки",
+        count: 0,
+        images: [require('@/assets/images/products/PolyBlock3.jpg'),]
+    },
+    {
+        id: 7,
+        title: "сухие строительные смеси",
+        count: 0,
+        images: [require('@/assets/images/products/ProductGroup.jpg'),]
+    },
+]
