@@ -8,16 +8,24 @@
     <div class="header__routes">
       <div class="header__routes__item" v-for="item in menuItems" :key="item.id">
         <a :href="item.route" class="header__routes__item__link" :key="item" @click="handleClickMenu(item)">
-         {{ $t(item.title) }}
+          {{ $t(item.title) }}
         </a>
       </div>
     </div>
-    <div class="header__switcher">
-      <LanguageSwitcher />
+    <div class="header__options">
+      <div class="header__options__switcher">
+        <LanguageSwitcher />
+      </div>
+      <div class="header__options__basket" v-if="cartItems && cartItems.length > 0">
+        <BasketPopup :cartItems="cartItems" />
+      </div>
     </div>
     <div class="header__menu-mobile">
       <div class="header__switcher-mobile">
         <LanguageSwitcher />
+      </div>
+      <div class="header__menu-mobile__basket-mobile" v-if="cartItems && cartItems.length > 0">
+        <BasketPopup :cartItems="cartItems" />
       </div>
       <div class="header__menu-mobile__button">
         <img src="@/assets/icons/BurgerMenu.svg" alt="Construction" @click="drawer = true">
@@ -38,16 +46,22 @@
 <script>
 import {LandingMenuItems} from "@/core/configs/NavbarMenuItems";
 import LanguageSwitcher from "@/components/layout/header/LanguageSwitcher.vue";
+import BasketPopup from "@/components/layout/header/BasketPopup.vue";
 
 export default {
   name: "HeaderMenu",
-  components: {LanguageSwitcher},
+  components: {BasketPopup, LanguageSwitcher},
   data() {
     return {
       menuItems: LandingMenuItems,
       menuOpen: false,
       drawer: false,
     }
+  },
+  computed: {
+    cartItems() {
+      return this.$store.state.cartItems;
+    },
   },
   methods: {
     handleClickMenu(linkId) {
@@ -61,6 +75,7 @@ export default {
   }
 }
 </script>
+
 
 <style lang="scss">
 .header {
@@ -87,10 +102,23 @@ export default {
       height: 56px;
     }
   }
-  &__switcher {
+  &__options {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 16px;
+    position: relative;
+    &__switcher {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__basket {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 85vh;
+      right: -10vw;
+    }
   }
   &__switcher-mobile {
     display: none;
@@ -121,6 +149,10 @@ export default {
   }
   &__menu-mobile {
     display: none;
+    position: relative;
+    &__basket-mobile {
+      display: none;
+    }
   }
 }
 @media(max-width: 1668px) {
@@ -165,8 +197,13 @@ export default {
 }
 @media(max-width: 991px) {
   .header {
-    &__switcher {
-      display: none;
+    &__options {
+      &__switcher {
+        display: none;
+      }
+      &__basket {
+        display: none;
+      }
     }
     &__switcher-mobile {
       display: flex;
@@ -233,6 +270,12 @@ export default {
           transition: 0.5s;
         }
       }
+      &__basket-mobile {
+        display: flex;
+        position: absolute;
+        right: -2vw;
+        top: 82vh;
+      }
     }
   }
 }
@@ -261,6 +304,26 @@ export default {
         }
       }
     }
+  }
+}
+@media(min-width: 1980px) {
+  .header__options__basket {
+    right: -5vw;
+  }
+}
+@media(max-width: 1595px) {
+  .header__options__basket {
+    right: -5vw;
+  }
+}
+@media(max-width: 1383px) {
+  .header__options__basket {
+    right: -2vw;
+  }
+}
+@media(max-width: 335px) {
+  .header__menu-mobile__basket-mobile {
+    right: 10vw;
   }
 }
 </style>
