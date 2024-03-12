@@ -61,7 +61,7 @@
         </div>
         <div class="footer__bottom__info__initials">
           <span>Адрес : РА, Араратский марз, с. Арарат, Арарат, 5 участок Ереванского шоссе.</span>
-          <span>Номер : TestPhoneNumber</span>
+<!--          <span>Номер : TestPhoneNumber</span>-->
           <span>Email : m1groupearmenia@gmail.com</span>
         </div>
       </div>
