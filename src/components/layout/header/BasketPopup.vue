@@ -23,11 +23,11 @@
           <div class="popup__container__item__title">{{$t( item.title )}}</div>
           <div class="popup__container__item__count">
             <div @click="decrementCount(index)">
-              <img src="@/assets/icons/count_minus.svg" alt="M1">
+              <img src="@/assets/icons/count_minus.png" alt="M1">
             </div>
             {{ item.count }}
             <div @click="incrementCount(index)">
-              <img src="@/assets/icons/count_plus.svg" alt="M1">
+              <img src="@/assets/icons/count_plus.png" alt="M1">
             </div>
           </div>
         </div>
@@ -132,6 +132,7 @@ export default {
           img {
             width: 15px;
             height: 15px;
+            fill: white;
           }
         }
         div:hover {
@@ -236,6 +237,11 @@ export default {
         right: -6px;
       }
     }
+  }
+}
+@media(max-width: 500px) {
+  .popup__container__item {
+    flex-direction: column;
   }
 }
 </style>

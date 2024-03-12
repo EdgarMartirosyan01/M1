@@ -378,6 +378,9 @@ html {
 .el-dropdown__popper .el-dropdown-menu {
   background: #7a7a7a;
 }
+.popup .el-dialog {
+  width: 80vw;
+}
 .basket-form {
   .el-form {
     display: flex;

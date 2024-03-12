@@ -116,7 +116,7 @@ export default {
       align-items: center;
       justify-content: center;
       position: absolute;
-      top: 90vh;
+      top: 85vh;
       right: -10vw;
     }
   }
@@ -274,7 +274,7 @@ export default {
         display: flex;
         position: absolute;
         right: -2vw;
-        top: 90vh;
+        top: 82vh;
       }
     }
   }
