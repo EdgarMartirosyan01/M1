@@ -76,7 +76,6 @@ export default {
           font-style: normal;
           font-weight: 400;
           line-height: normal;
-          text-transform: capitalize;
         }
       }
     }
