@@ -10,25 +10,34 @@
         >
           <el-form-item prop="fullName" :rules="fullNameValidation">
             <el-input
-                placeholder="ФИО*"
+                :placeholder="$t('ФИО*')"
                 input-style="background"
                 v-model="dynamicValidateForm.fullName"
+                :maxlength="25"
+                clearable
             />
           </el-form-item>
           <el-form-item prop="email" :rules="emailValidationRules">
             <el-input
-                placeholder="E-mail*"
+                :placeholder="$t('E-mail*')"
                 v-model="dynamicValidateForm.email"
+                :maxlength="25"
+                clearable
             />
           </el-form-item>
           <el-form-item prop="phone" :rules="phoneValidationRules">
             <el-input
                 type="number"
-                placeholder="Phone Number*"
+                :placeholder="$t('Phone Number*')"
                 v-model="dynamicValidateForm.phone"
+                :maxlength="12"
+                clearable
             />
           </el-form-item>
-          <el-button @click="sendEmail">
+          <div class="success_message" v-if="isEmailSent">
+            {{$t('ваше сообщение успешно было отправлено')}}
+          </div>
+          <el-button :disabled="!isFormCompleted" @click="sendEmail">
             {{$t('Заказать Сейчас')}}
           </el-button>
         </el-form>
@@ -52,68 +61,94 @@ export default {
       emailValidationRules: [
         {
           required: true,
-          message: 'Please input email address',
+          message: this.$t('Please input email address'),
           trigger: 'blur',
         },
         {
           type: 'email',
-          message: 'Please input a correct email address',
+          message: this.$t('Please input a correct email address'),
           trigger: ['blur', 'change'],
         },
       ],
       phoneValidationRules: [
         {
           required: true,
-          message: 'Please input phone number',
+          message: this.$t('Please input phone number'),
           trigger: 'blur',
         },
         {
           type: 'phone',
-          message: 'Please input a correct phone number',
+          message: this.$t('Please input a correct phone number'),
           trigger: ['blur', 'change'],
         },
       ],
       fullNameValidation: [
         {
           required: true,
-          message: 'Please input your initials',
+          message: this.$t('Please input your initials'),
           trigger: 'blur',
         },
       ],
-      message: '', // To bind the message area
+      isEmailSent: false,
+    }
+  },
+  computed: {
+    isFormCompleted() {
+      return Object.values(this.dynamicValidateForm).every(value => !!value);
     }
   },
   methods: {
-    sendEmail() {
-      // Combine name, email, and message with chosen products and counts
+    async sendEmail() {
       const emailContent = {
         fullName: this.dynamicValidateForm.fullName,
         email: this.dynamicValidateForm.email,
         message: this.createMessageContent(),
         phone: this.dynamicValidateForm.phone,
       }
-      // Now, send the email using Axios or any other method
-      this.sendEmailViaAxios(emailContent);
-    },
-    createMessageContent() {
-      // Initialize an empty string for the message content
-      let content = '';
-      // Loop through each product in the cartItems
-      for (const product of this.$store.state.cartItems) {
-        // Append the product title and count to the message content
-        content += `${product.title}: ${product.count}\n`;
-      }
-      // Return the constructed message content
-      return content;
-    },
-    async sendEmailViaAxios(emailContent) {
       try {
-        let res = await axios.post('http://localhost:8000/send-mail', emailContent); //m1.weflex.am
-        console.log('RES => ', res);
+        await axios.post('http://localhost:8000/send-mail', emailContent); //m1.weflex.am
+        this.isEmailSent = true;
+        this.resetForm();
       } catch (e) {
         console.error('err => ', e);
       }
+    },
+    createMessageContent() {
+      let content = '';
+      for (const product of this.$store.state.cartItems) {
+        content += `${product.title}: ${product.count}\n`;
+      }
+      return content;
+    },
+    resetForm() {
+      this.dynamicValidateForm.email = '';
+      this.dynamicValidateForm.fullName = '';
+      this.dynamicValidateForm.phone = '';
+      this.$refs.formRef.clearValidate();
     }
-  }
+  },
 }
 </script>
+
+<style lang="scss">
+.success_message {
+  color: #DF2129;
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(max-width: 991px) {
+  .success_message {
+    font-size: 12px;
+    font-weight: 5050;
+    line-height: 24px;
+  }
+}
+</style>

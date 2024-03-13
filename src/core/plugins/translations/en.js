@@ -195,5 +195,14 @@ export default {
     "Добавить В Корзину": "Add To Cart",
     "Корзина": "Basket",
     "Заказать Сейчас": "Order Now",
+    "ваше сообщение успешно было отправлено": "your message has been sent successfully",
+    "Please input your initials": "Please input your initials",
+    "Please input a correct phone number": "Please input a correct phone number",
+    "Please input phone number": "Please input phone number",
+    "Please input a correct email address": "Please input a correct email address",
+    "Please input email address": "Please input email address",
+    "ФИО*": "Initials*",
+    "E-mail*": "E-mail*",
+    "Phone Number*": "Phone Number*",
 
 }
