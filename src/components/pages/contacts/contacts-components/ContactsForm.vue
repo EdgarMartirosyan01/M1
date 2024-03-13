@@ -15,16 +15,16 @@
             </div>
           </a>
         </div>
-        <div class="contacts__container__info__item">
-          <a href="tel: +374 77 77 77">
-            <div class="contacts__container__info__item__icon">
-              <img src="@/assets/images/contactsIcons/phone.svg" alt="Contacts">
-            </div>
-            <div class="contacts__container__info__item__description">
-                +374 77 77 77 77
-            </div>
-          </a>
-        </div>
+<!--        <div class="contacts__container__info__item">-->
+<!--          <a href="tel: +374 77 77 77">-->
+<!--            <div class="contacts__container__info__item__icon">-->
+<!--              <img src="@/assets/images/contactsIcons/phone.svg" alt="Contacts">-->
+<!--            </div>-->
+<!--            <div class="contacts__container__info__item__description">-->
+<!--                +374 77 77 77 77-->
+<!--            </div>-->
+<!--          </a>-->
+<!--        </div>-->
         <div class="contacts__container__info__item">
           <a href="#contact-form">
             <div class="contacts__container__info__item__icon">
@@ -190,6 +190,7 @@ export default {
           display: flex;
           flex-direction: column;
           gap: 15px;
+          height: 80px;
         }
         &__icon {
         }
