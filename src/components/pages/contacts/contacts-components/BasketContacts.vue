@@ -13,7 +13,7 @@
                 :placeholder="$t('ФИО*')"
                 input-style="background"
                 v-model="dynamicValidateForm.fullName"
-                :maxlength="25"
+                :maxlength="35"
                 clearable
             />
           </el-form-item>
@@ -21,7 +21,7 @@
             <el-input
                 :placeholder="$t('E-mail*')"
                 v-model="dynamicValidateForm.email"
-                :maxlength="25"
+                :maxlength="35"
                 clearable
             />
           </el-form-item>
@@ -30,7 +30,7 @@
                 type="number"
                 :placeholder="$t('Phone Number*')"
                 v-model="dynamicValidateForm.phone"
-                :maxlength="12"
+                :maxlength="20"
                 clearable
             />
           </el-form-item>
@@ -132,7 +132,7 @@ export default {
 
 <style lang="scss">
 .success_message {
-  color: #DF2129;
+  color: #7fc21f;
   font-feature-settings: 'clig' off, 'liga' off;
   font-family: Montserrat;
   font-size: 20px;
