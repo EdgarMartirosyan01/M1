@@ -190,6 +190,7 @@ export default {
       &__item {
         display: flex;
         &__link {
+          font-size: 16px;
         }
       }
     }
