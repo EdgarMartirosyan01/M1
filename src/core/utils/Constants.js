@@ -24,7 +24,7 @@ export const SUPPORTED_LOCALES = {
     },
     am: {
         key: 'am',
-        shortKet: 'AM',
+        shortKey: 'AM',
         title: 'Հայերեն',
         flag: require('@/assets/icons/Armenian-flag.webp')
     }

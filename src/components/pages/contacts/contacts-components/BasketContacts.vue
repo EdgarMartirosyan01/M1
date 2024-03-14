@@ -106,7 +106,7 @@ export default {
         phone: this.dynamicValidateForm.phone,
       }
       try {
-        await axios.post('http://localhost:8000/send-mail', emailContent); //m1.weflex.am
+        await axios.post('http://m1.weflex.am/send-mail', emailContent);
         this.isEmailSent = true;
         this.resetForm();
       } catch (e) {
