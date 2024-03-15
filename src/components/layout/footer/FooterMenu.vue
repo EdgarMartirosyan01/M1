@@ -20,7 +20,7 @@
                 prop="fullName"
                 :rules="fullNameValidation">
               <el-input
-                  placeholder="Имя"
+                  :placeholder="$t('ФИО*')"
                   input-style="background"
                   v-model="dynamicValidateForm.fullName"
               />
@@ -30,19 +30,20 @@
                 :rules="emailValidationRules"
             >
               <el-input
-                  placeholder="e-mail"
+                  :placeholder="$t('E-mail*')"
                   v-model="dynamicValidateForm.email"
               />
             </el-form-item>
           </div>
           <el-form-item
-              prop="message"
-              :rules="messageValidation"
+              prop="phone"
+              :rules="phoneValidationRules"
           >
             <div class="footer-message-area">
               <el-input
-                  placeholder="Телефон"
-                  v-model="dynamicValidateForm.message"
+                  type="number"
+                  :placeholder="$t('Phone Number*')"
+                  v-model="dynamicValidateForm.phone"
               />
             </div>
           </el-form-item>
@@ -85,61 +86,66 @@ export default {
   data() {
     return {
       dynamicValidateForm: {
-        domains: [
-          {
-            key: 1,
-            value: '',
-          },
-        ],
         email: '',
         fullName: '',
-        message: '',
+        phone: '',
       },
       emailValidationRules: [
         {
           required: true,
-          message: 'Please input email address',
+          message: this.$t('Please input email address'),
           trigger: 'blur',
         },
         {
           type: 'email',
-          message: 'Please input a correct email address',
+          message: this.$t('Please input a correct email address'),
+          trigger: ['blur', 'change'],
+        },
+      ],
+      phoneValidationRules: [
+        {
+          required: true,
+          message: this.$t('Please input phone number'),
+          trigger: 'blur',
+        },
+        {
+          type: 'phone',
+          message: this.$t('Please input a correct phone number'),
           trigger: ['blur', 'change'],
         },
       ],
       fullNameValidation: [
         {
           required: true,
-          message: 'Please input your initials',
+          message: this.$t('Please input your initials'),
           trigger: 'blur',
         },
       ],
-      messageValidation: [
-        {
-          required: true,
-          message: 'Please input your message',
-          trigger: 'blur',
-        },
-      ],
-      domainValidationRules: {
-        required: true,
-        message: 'Domain cannot be null',
-        trigger: 'blur',
-      },
+      isEmailSent: false,
     }
   },
   methods: {
     async sendEmail() {
-      try {
-        console.log(this.dynamicValidateForm)
-        let res = await axios.post('http://localhost:8000/send-mail', this.dynamicValidateForm)
-        console.log('RES => ', res)
-      } catch (e) {
-        console.error('err => ', e)
+      const emailContent = {
+        fullName: this.dynamicValidateForm.fullName,
+        email: this.dynamicValidateForm.email,
+        phone: this.dynamicValidateForm.phone,
       }
-
+      try {
+        await axios.post('http://m1.weflex.am/send-mail', emailContent);
+        this.isEmailSent = true;
+        this.resetForm();
+      } catch (e) {
+        console.error('err => ', e);
+      }
+    },
+    resetForm() {
+      this.dynamicValidateForm.email = '';
+      this.dynamicValidateForm.fullName = '';
+      this.dynamicValidateForm.phone = '';
+      this.$refs.formRef.clearValidate();
     }
-  }
+  },
 }
 </script>
 

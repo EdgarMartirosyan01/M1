@@ -125,16 +125,38 @@ export default {
   },
   methods: {
     async sendEmail() {
-      try {
-        console.log(this.dynamicValidateForm)
-        let res = await axios.post('http://m1.weflex.am/send-mail', this.dynamicValidateForm)
-        console.log('RES => ', res)
-      } catch (e) {
-        console.error('err => ', e)
+      const emailContent = {
+        fullName: this.dynamicValidateForm.fullName,
+        email: this.dynamicValidateForm.email,
+        message: this.dynamicValidateForm.message,
       }
-
+      try {
+        await axios.post('http://m1.weflex.am/send-mail', emailContent);
+        this.isEmailSent = true;
+        this.resetForm();
+      } catch (e) {
+        console.error('err => ', e);
+      }
+    },
+    resetForm() {
+      this.dynamicValidateForm.email = '';
+      this.dynamicValidateForm.fullName = '';
+      this.dynamicValidateForm.message = '';
+      this.$refs.formRef.clearValidate();
     }
-  }
+  },
+  // methods: {
+  //   async sendEmail() {
+  //     try {
+  //       console.log(this.dynamicValidateForm)
+  //       let res = await axios.post('http://m1.weflex.am/send-mail', this.dynamicValidateForm)
+  //       console.log('RES => ', res)
+  //     } catch (e) {
+  //       console.error('err => ', e)
+  //     }
+  //
+  //   }
+  // }
 }
 </script>
 
